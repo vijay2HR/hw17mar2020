@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND REVERSE USING FUNTION</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-2"></div>
+            <div class="col col-12 col-sm-8">
+
+                <form class="jumbotron" style="background-color:yellow;">
+            
+
+                    <h4 class=" text-center text-info">
+                        
+                        <p class="bg-danger text-white">ENTER NUMBER TO CHECK PALINDROME OR NOT</p></h4>
+                    <b>INPUT NUMBER BELOW</b><p></p> <input type="text" class="form-control" class="bg-white col-12 colo-sm-4" id="num"><p></p>
+                   <center> <button type="button"  class="btn btn-secondary" onclick="palindrome();">CHECK PALINDROME</button><br>
+
+                    <p></p>
+                                        <p id="result" class="bg-white col-12 colo-sm-4"> RESULT DISPLAY HERE </p>
+                    <br>
+                </form>
+            </div>
+            <div class="col col-sm-2"></div>
+        </div>
+    </div>
+    <script>
+         function palindrome(){
+              const a=document.getElementById("num").value;
+              var rev=0;
+              var rem;
+               var y=a;
+               var p=a;
+                  while(y>0)
+                   {
+                      rem=y%10;
+                     rev=rev*10+rem;
+                      y=parseInt(y/10)
+                    }
+                    if (p==rev)
+                    {
+
+                       // console.log(p+"pal");
+                       document.getElementById("result").innerHTML=p+"   IS PALINDROME";
+                    }
+                      else
+                      {
+                        //console.log(p+"    IS NOT PALINDROME");
+                      document.getElementById("result").innerHTML=p+"   IS NOT PALINDROME";
+                       }
+            }
+        </script>
+</body>
+<html>
+   <!----console.log(x+" divisible by 8 ");
+
+    document.getElementById("result").innerHTML=x+" divisible by 8 ";-->
